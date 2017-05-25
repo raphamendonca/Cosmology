@@ -27,7 +27,6 @@ def getE(a, mat, rad, lamb):
 
 # In[11]:
 
-# Run simulation backward from present day until scale factor is < 0.01
 def expansionSim(Em, Er, El, cor, title):
     To = 0.0
     a0 = 1.0
@@ -40,14 +39,14 @@ def expansionSim(Em, Er, El, cor, title):
         plt.scatter(-a0, -To/1.0e9, marker=".", color=cor)
         
 
-    To = 0.0
-    a0 = 1.0
-    He = H0
-    while To < 1.0e10:
-        He = He + Te*-4.0/3.0*pi*G*getE(a0, Em, Er, El)
-        a0 += Te*He
-        To += Te
-        plt.scatter(-a0, -To/1.0e9, marker=".", color=cor)
+#    To = 0.0
+#    a0 = 1.0
+#    He = H0
+#    while To < 1.0e10:
+#        He = He + Te*-4.0/3.0*pi*G*getE(a0, Em, Er, El)
+#        a0 += Te*He
+#        To += Te
+#        plt.scatter(-a0, -To/1.0e9, marker=".", color=cor)
         
 
 
